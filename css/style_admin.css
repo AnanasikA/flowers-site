@@ -155,6 +155,10 @@ section {
     animation: fadeIn .2s linear;
 }
 
+.header .flex .account-box.active{
+    display: inline-block;
+}
+
 .header .flex .account-box p {
     padding-bottom: 1rem;
     font-size: 2rem;
