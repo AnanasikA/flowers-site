@@ -238,9 +238,17 @@ section {
         background-color: var(--white);
         border-top: var(--border);
         border-bottom: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-    .header .flex .navbar a {}
+    .header .flex .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .flex .navbar a {
+        margin: 2rem;
+        display: block;
+    }
 }
 
 @media (max-width: 450px) {
