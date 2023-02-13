@@ -218,6 +218,24 @@ section {
     display: none;
 }
 
+.dashboard .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap:1.5rem;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+ }
+ 
+ .dashboard .box-container .box{
+    text-align: center;
+    border:var(--border);
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    border-radius: .5rem;
+ }
+
 
 
 
