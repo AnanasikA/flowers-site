@@ -47,6 +47,12 @@ if(isset($_GET['delete'])){
 
     $delete_id = $_GET['delete'];
     $select_delete_image = mysqli_query($conn, "SELECT image FROM `products` WHERE id = '$delete_id'") or die('query failed');
+    $fetch_delete_image = mysqli_fetch_assoc($select_delete_image);
+    unlink('uploaded_img/'.$fetch_delete_image['image']);
+    mysqli_query($conn,"DELETE FROM `products` WHERE id = '$delete_id'") or die('query failed');
+    mysqli_query($conn,"DELETE FROM `wishlist` WHERE pid = '$delete_id'") or die('query failed');
+    mysqli_query($conn,"DELETE FROM `cart` WHERE pid = '$delete_id'") or die('query failed');
+    header('location:admin_products.php');
 
 }
 
@@ -63,7 +69,7 @@ if(isset($_GET['delete'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom admin css file link  -->
-   <link rel="stylesheet" href="./css/admin_style.css">
+   <link rel="stylesheet" href="./css/Admin_style.css">
 
 </head>
 <body>
@@ -77,7 +83,7 @@ if(isset($_GET['delete'])){
 
         <h3>add new product</h3>
         <input type="text" class="box" required placeholder="enter product name" name="name">
-        <input type="price" class="box" required placeholder="enter product price" name="price">
+        <input type="number" min="0" class="box" required placeholder="enter product price" name="price">
         <textarea name="details" class="box" required placeholder="enter product details" cols="30" rows="10"></textarea>
         <input type="file" accept="image/jpg, image/jpeg, image/png" required class="box" name="image">
         <input type="submit" value="add product" name="add_product" class="btn">
@@ -107,12 +113,14 @@ if(isset($_GET['delete'])){
         </div>
 
         <?php 
-            }
-
+            } 
+        }else{
+            echo '<p class="empty">No products added yet!</p>';
         }
         ?>
 
     </div>
+
 
 </section>
 
