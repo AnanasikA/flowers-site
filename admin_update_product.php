@@ -52,7 +52,7 @@ if(isset($_POST['update_product'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom admin css file link  -->
-   <link rel="stylesheet" href="./css/Admin_style.css">
+   <link rel="stylesheet" href="./css/admin_style.css">
 
 </head>
 <body>
@@ -63,7 +63,6 @@ if(isset($_POST['update_product'])){
 
 <?php
 
-    $_GET['update'] = '';
     $update_id = $_GET['update'];
     $select_products = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$update_id'") or die('query failed');
     if(mysqli_num_rows($select_products) > 0) {
