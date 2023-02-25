@@ -481,7 +481,7 @@ section {
     justify-content: center;
 }
 
-.message .box-container .box {
+.messages .box-container .box {
     padding: 2rem;
     border: var(--border);
     background-color: var(--white);
@@ -490,14 +490,14 @@ section {
     text-align: center;
 }
 
-.message .box-container .box p {
+.messages .box-container .box p {
     font-size: 2rem;
     color: var(--light-color);
     margin-bottom: 1rem;
     line-height: 1.5;
 }
 
-.message .box-container .box p span {
+.messages .box-container .box p span {
     color: var(--pink);
 }
 
