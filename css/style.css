@@ -69,14 +69,6 @@ section {
     text-transform: capitalize;
 }
 
-.title {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--black);
-    text-transform: uppercase;
-    font-size: 4rem;
-}
-
 .message{
     position: sticky;
     top:0;
@@ -134,6 +126,19 @@ section {
     background-color: var(--white);
     border-radius: .5rem;
     text-transform: capitalize;
+}
+
+.more-btn {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: 4rem;
 }
 
 @keyframes fadeIn {
@@ -341,7 +346,147 @@ section {
     justify-content: center;
 }
 
+.products .box-container .box {
+    background-color: var(--white);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
 
+.products .box-container .box .image {
+    height: 35rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.products .box-container .box .fa-eye,
+.products .box-container .box .price {
+    position: absolute;
+    top: 1rem;
+    border-radius: .5rem;
+}
+
+.products .box-container .box .price {
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: var(--pink);
+    color: var(--white);
+    left: 1rem;
+}
+
+.products .box-container .box .fa-eye {
+    right: 1rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.2rem;
+    font-size: 2rem;
+    background-color: var(--white);
+    color: var(--black);
+    border: var(--border);
+}
+
+.products .box-container .box .fa-eye:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.products .box-container .box .name {
+    margin: 1rem;
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.products .box-container .box .qty {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    border: var(--border);
+    border-radius: .5rem;
+    margin: .5rem 0;
+}
+
+.products .box-container .box .btn,
+.products .box-container .box .option-btn {
+    width: 100%;
+}
+
+.quick-view form {
+    max-width: 60rem;
+    padding: 2rem;
+    text-align: center;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    background-color: var(--white);
+    margin: 0 auto;
+}
+
+.quick-view form .image {
+    height: 33rem;
+    border: var(--border);
+    border-radius: .5rem;
+}
+
+.quick-view form .name {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.quick-view form .price {
+    color: var(--red);
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+.quick-view form .details {
+    padding: 1rem 0;
+     font-size: 1.5rem;
+     color: var(--light-color);
+     line-height: 2;
+}
+
+.quick-view form .qty {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    border-radius: .5rem;
+    border: var(--border);
+    margin: .5rem 0;
+}
+
+.home-contact {
+    background-color: var(--black);
+    text-align: center;
+}
+
+.home-contact .content {
+    max-width: 50rem;
+    margin:  0 auto;
+}
+
+.home-contact .content h3 {
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 3rem;
+}
+
+.home-contact .content p {
+    line-height: 2;
+    font-size: 1.5rem;
+    color: var(--light-white);
+    padding: 1rem 0;
+}
+
+.home-contact .content .btn {
+    background-color: var(--white);
+    color: var(--black);
+}
 
 
 
